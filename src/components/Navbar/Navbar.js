@@ -1,6 +1,6 @@
 import './Navbar.scss'
 import logo from './logo.jpg'
-import Carrito from '../Carrito/Carrito'
+import Carrito from '../CartWidget/CartWidget'
 
 export const Navbar = () => {
   return (
@@ -10,9 +10,9 @@ export const Navbar = () => {
           <img src ={logo} alt= 'logo' className="header__logo"></img>
 
         <nav className="navbar">
-          <p className="navbar__link">Enlace 1 </p>
-          <p className="navbar__link">Enlace 2</p>
-          <p className="navbar__link">Enlace 3</p>
+          <p className="navbar__link">Postres </p>
+          <p className="navbar__link">Tortas</p>
+          <p className="navbar__link">Facturas</p>
         </nav>
         <Carrito/>
       </div>

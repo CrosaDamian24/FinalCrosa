@@ -1,5 +1,5 @@
 import { FaCartPlus } from "react-icons/fa";
-import "./carrito.scss";
+import "./CartWidget.scss";
 
 const Carrito = () => {
   return (
