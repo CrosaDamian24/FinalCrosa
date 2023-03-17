@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ItemListContainer greeting={"Postres individuales"} />
+      {/* <ItemListContainer greeting={"Postres individuales"} /> */}
       <Footer />
     
     </div>

@@ -1,7 +1,7 @@
 import { FaCartPlus } from "react-icons/fa";
 import "./CartWidget.scss";
 
-const Carrito = () => {
+const CartWidget = () => {
   return (
     <div className="carrito">
       <FaCartPlus className="carrito-icon"/>
@@ -10,4 +10,4 @@ const Carrito = () => {
   );
 };
 
-export default Carrito;
+export default CartWidget;
