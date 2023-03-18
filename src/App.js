@@ -14,7 +14,7 @@ function App() {
         {/* greeting={"Postres individuales"}  */}
         {/* */}
         <Routes>
-          <Route            path="CrosaDamian24/React.git/"    element={<ItemListContainer />}  />
+          <Route            path="/"    element={<ItemListContainer />}  />
           <Route            path="/nostros"    element={<ItemListContainer />}  />
         </Routes>
       </div>
