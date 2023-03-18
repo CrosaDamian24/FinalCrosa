@@ -4,6 +4,7 @@ import "../ItemListContainer/ItemListContainer.scss";
 import { useEffect, useState } from "react";
 import{pedirDatos} from '../../helpers/pedirDatos';
 import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom";
 
 
 
@@ -11,13 +12,21 @@ import ItemList from "../ItemList/ItemList"
 export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true)
-  // console.log(productos);
+  
+
+  const {categoryId} = useParams()
+  console.log(categoryId);
 
   useEffect(() => {
     setLoading(true)
     pedirDatos()
       .then((res) => {
-        setProductos(res);
+        if (categoryId){
+          setProductos (res.filter((prod) => prod.category ===categoryId))
+        }else{
+           setProductos(res);
+        }
+       
       })
       .catch((error) => {
         console.log(error);
@@ -25,7 +34,7 @@ export const ItemListContainer = () => {
       .finally(() =>{
         setLoading(false)
       });
-  }, []);
+  }, [categoryId]);
 
   return (
     <div className="container my-5">

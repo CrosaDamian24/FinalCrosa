@@ -1,6 +1,7 @@
 import './Navbar.scss'
 import logo from './logo.jpg'
 import CartWidget from '../CartWidget/CartWidget'
+import {Link} from 'react-router-dom'
 
 export const Navbar = () => {
   return (
@@ -10,9 +11,9 @@ export const Navbar = () => {
           <img src ={logo} alt= 'logo' className="header__logo"></img>
 
         <nav className="navbar">
-          <p className="navbar__link">Postres </p>
-          <p className="navbar__link">Tortas</p>
-          <p className="navbar__link">Facturas</p>
+          <Link to ='/'                  className="navbar__link">Inicio </Link>
+          <Link to ='/productos/tortas'  className="navbar__link">Tortas</Link>
+          <Link to ='/productos/postres' className="navbar__link">Postres</Link>
         </nav>
         <CartWidget/>
       </div>

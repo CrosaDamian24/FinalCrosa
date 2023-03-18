@@ -12,10 +12,12 @@ function App() {
 
         {/* <Footer /> */}
         {/* greeting={"Postres individuales"}  */}
-        {/* */}
+        {/* CrosaDamian24/React.git*/}
+        {/* dfdf */}
         <Routes>
           <Route            path="/"    element={<ItemListContainer />}  />
-          <Route            path="/nostros"    element={<ItemListContainer />}  />
+          <Route            path="/productos/:categoryId"    element={<ItemListContainer />}  />
+          {/* <Route            path="/nostros"    element={<ItemListContainer />}  /> */}
         </Routes>
       </div>
     </BrowserRouter>

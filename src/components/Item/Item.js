@@ -7,6 +7,7 @@ export const Item = ({ item }) => {
       <img src={item.img} alt="prod" />
       <p>{item.descripcion}</p>
       <p>{item.precio}</p>
+      <p><small>{item.category}</small></p>
 
 
         <button className="btn btn-primary">Ver mas </button>
