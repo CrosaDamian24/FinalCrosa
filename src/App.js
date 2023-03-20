@@ -3,24 +3,34 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { Footer } from "./components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
+import React,{useState} from "react";
+import { Inicio } from "./components/Inicio/Inicio";
+import { Carga } from "./components/Carga/Carga";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div>
-        <Navbar />
 
-        {/* <Footer /> */}
-        {/* greeting={"Postres individuales"}  */}
-        {/* CrosaDamian24/React.git*/}
-        {/* dfdf */}
-        <Routes>
-          <Route            path="/"    element={<ItemListContainer />}  />
-          <Route            path="/productos/:categoryId"    element={<ItemListContainer />}  />
-          {/* <Route            path="/nostros"    element={<ItemListContainer />}  /> */}
-        </Routes>
+  const [loading, setLoading] = useState(false)
+
+  setTimeout(() => {
+    setLoading(true)
+  }, 2000);
+
+  return (
+    // <BrowserRouter>
+      <div>
+
+        {
+          loading
+          ?<Inicio/>
+          :<Carga/>
+        }
+
+
+
+      {/* <Footer /> */}
       </div>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 

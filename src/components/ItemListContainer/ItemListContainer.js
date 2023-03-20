@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import{pedirDatos} from '../../helpers/pedirDatos';
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom";
+import { Spinner } from "react-bootstrap";
+import { Loading } from "../Loading/Loading";
+
+
 
 
 
@@ -41,10 +45,12 @@ export const ItemListContainer = () => {
 
       {
         loading
-        ?<h2>Cargando...</h2>
+        ?   <Loading/>
+        //  <h2 className="alta">Carga...</h2> 
         : <ItemList items={productos}/>
       }
   
+
   
 
       {/* <p>{greeting}</p> */}

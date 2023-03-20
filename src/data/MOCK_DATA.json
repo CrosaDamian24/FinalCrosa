@@ -1,37 +1,38 @@
 [
   {
     "id": 1,
-    "nombre": "Oreo",
+    "nombre": "Postre Oreo",
     "precio": 800,
     "descripcion": "Una capa de Oreo, dulce de leche y crema chantillí.",
-    "img": "https://via.placeholder.com/200",
+    "img":"/img/oreo.png",
+   
     "category": "postres",
     "stock": 5
   },
   {
     "id": 2,
-    "nombre": "Chocolina",
+    "nombre": "Postre Chocolina",
     "precio": 750,
     "descripcion": "Una capa de Chocolinas, dulce de leche y crema chantillí.",
-    "img": "https://via.placeholder.com/200",
+    "img": "/img/chocotorta.png",
     "category": "postres",
     "stock": 6
   },
   {
     "id": 3,
-    "nombre": "Gula",
+    "nombre": "Postre Gula",
     "precio": 850,
     "descripcion": "Una capa de Chocolinas y Oreo, dulce de leche y crema chantillí.",
-    "img": "https://via.placeholder.com/200",
+    "img": "/img/gula.png",
     "category": "postres",
     "stock": 10
   },
   {
     "id": 4,
-    "nombre": "Cheesecake",
+    "nombre": "Postre Cheesecake",
     "precio": 750,
     "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
-    "img": "https://via.placeholder.com/200",
+    "img": "/img/cheesecake.png",
     "category": "postres",
     "stock": 4
   },
@@ -40,22 +41,31 @@
     "nombre": "Torta Matilda",
     "precio": 750,
     "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
-    "img": "https://via.placeholder.com/200",
+    "img": "/img/matilda.jpg",
     "category": "tortas",
     "stock": 7
   },
   {
     "id": 6,
-    "nombre": "Torta Rogel",
+    "nombre": "Torta Chocolate",
     "precio": 750,
     "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
-    "img": "https://via.placeholder.com/200",
+    "img": "/img/chocolate.jpg",
     "category": "tortas",
     "stock": 2
   },
   {
-    "id": 57,
-    "nombre": "Torta Toffi",
+    "id": 7,
+    "nombre": "Torta Red Velvet",
+    "precio": 750,
+    "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
+    "img": "/img/red.jpg",
+    "category": "tortas",
+    "stock": 7
+  },
+  {
+    "id": 8,
+    "nombre": "Torta Balcarce",
     "precio": 750,
     "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
     "img": "https://via.placeholder.com/200",
