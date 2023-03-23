@@ -1,23 +1,22 @@
-// import "./ItemDetail.scss";
+import "./ItemDetail.scss";
 
 export const ItemDetail = ({ item }) => {
   return (
-    <div >
-
-
-    <div >
-
-        <h2>{item.nombre}</h2>
-
-      <hr />
-      <div >
-        {/* <p>prueba</p> */}
-        <img src={item.img} alt={item.nombre} className="img-fluid" />
+    <div className=" detalle col-8">
+      <div className="detalle__titulo">
+        <h2 className="my-2">{item.nombre}</h2>
       </div>
 
-      <h6>{item.descripcion}</h6>
-      {/* <p>Precio: ${item.precio}</p> */}
-    </div>
+      <div className="detalle__img">
+        <img
+          src={item.img}
+          alt={item.nombre}
+          className="img-fluid detalle__imagen"
+        />
+      </div>
+      <div className="detalle__descripcion">
+        <h5>{item.descripcion}</h5>
+      </div>
     </div>
   );
 };

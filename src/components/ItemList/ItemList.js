@@ -1,12 +1,14 @@
 import Item from "../Item/Item";
 
-export const ItemList = ({ items }) => {
+export const ItemList = ({ items, items2 }) => {
   return (
-    <div >
-      <h2 className="list-container__title">Productos</h2>
+    <div>
+      <h2 className="list-container__title">{items2.toUpperCase()}</h2>
       <hr />
       <div className="row justify-content-between list">
-        {items.map((producto) =>    <Item key={producto.id} item={producto} /> )  }
+        {items.map((producto) => (
+          <Item key={producto.id} item={producto} />
+        ))}
       </div>
     </div>
   );

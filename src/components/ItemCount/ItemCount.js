@@ -17,11 +17,19 @@ export const ItemCount = ({ initial, stock }) => {
 
   return (
     <div>
-      <button className="btn btn-danger" onClick={handleResta}  disabled={counter === initial}>
+      <button
+        className="btn btn-danger"
+        onClick={handleResta}
+        disabled={counter === initial}
+      >
         -
       </button>
       <span>{counter}</span>
-      <button className="btn btn-primary" onClick={handleSuma} disabled={counter >= stock}>
+      <button
+        className="btn btn-primary"
+        onClick={handleSuma}
+        disabled={counter >= stock}
+      >
         +
       </button>
       <button

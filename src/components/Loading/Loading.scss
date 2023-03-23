@@ -1,22 +1,22 @@
-.divPadre{
- 
+.divPadre {
     height: 100vh;
     position: relative;
-    
+    color: #6a4724;
 }
-.divHijo{
-    margin:0;
+.divHijo {
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100px;
 }
 
-// .spinnerReactstrap{
-//     width: 100px !important;
-//     height: 100px   !important;
+.spinnerReactstrap {
+    width: 100px !important;
+    height: 100px !important;
 
-//     border: 10px solid currentColor !important;
-//     // border-color: transparent !important
-// }
+    // border: 10px solid currentColor !important;
+    //  border-color: transparent !important
+}

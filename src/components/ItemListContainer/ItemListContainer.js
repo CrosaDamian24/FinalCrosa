@@ -7,26 +7,30 @@ import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import { Loading } from "../Loading/Loading";
+import {Error404} from '../Error404/Error404'
 
 
 
 
 
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({item}) => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true)
   
 
   const {categoryId} = useParams()
-  console.log(categoryId);
 
   useEffect(() => {
     setLoading(true)
     pedirDatos()
       .then((res) => {
         if (categoryId){
-          setProductos (res.filter((prod) => prod.category ===categoryId))
+          setProductos (res.filter((prod) => prod.category === categoryId))
+
+  
+
+        
         }else{
            setProductos(res);
         }
@@ -43,13 +47,11 @@ export const ItemListContainer = () => {
   return (
     <div className="container my-5">
 
-      {
-        loading
-        ?   <Loading/>
-        //  <h2 className="alta">Carga...</h2> 
-        : <ItemList items={productos}/>
-      }
-  
+     { loading
+     ? <Loading/>
+     : (productos.length>0)>0?<ItemList  items= {productos} items2={categoryId?categoryId:item}/>:<Error404/>
+     }
+
 
   
 

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "Postre Oreo",
-    "precio": 800,
+    "precio": 800.00,
     "descripcion": "Una capa de Oreo, dulce de leche y crema chantillí.",
     "img":"/img/oreo.png",
    
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "nombre": "Postre Chocolina",
-    "precio": 750,
+    "precio": 750.00,
     "descripcion": "Una capa de Chocolinas, dulce de leche y crema chantillí.",
     "img": "/img/chocotorta.png",
     "category": "postres",
@@ -21,7 +21,7 @@
   {
     "id": 3,
     "nombre": "Postre Gula",
-    "precio": 850,
+    "precio": 850.00,
     "descripcion": "Una capa de Chocolinas y Oreo, dulce de leche y crema chantillí.",
     "img": "/img/gula.png",
     "category": "postres",
@@ -30,7 +30,7 @@
   {
     "id": 4,
     "nombre": "Postre Cheesecake",
-    "precio": 750,
+    "precio": 750.00,
     "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
     "img": "/img/cheesecake.png",
     "category": "postres",
@@ -39,8 +39,8 @@
   {
     "id": 5,
     "nombre": "Torta Matilda",
-    "precio": 750,
-    "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
+    "precio": 3200.00,
+    "descripcion": "Bizcochuelo humedo de chocolote con mouse de chocolate en el medio",
     "img": "/img/matilda.jpg",
     "category": "tortas",
     "stock": 7
@@ -48,8 +48,8 @@
   {
     "id": 6,
     "nombre": "Torta Chocolate",
-    "precio": 750,
-    "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
+    "precio": 3000.00,
+    "descripcion": "Bizcochuelo de vainilla con dulce de leche y chips de chocolate en el medio",
     "img": "/img/chocolate.jpg",
     "category": "tortas",
     "stock": 2
@@ -57,18 +57,18 @@
   {
     "id": 7,
     "nombre": "Torta Red Velvet",
-    "precio": 750,
-    "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
+    "precio": 2300.00,
+    "descripcion": "Bizcochuelo sabor vainilla recubierto de queso crema dulce",
     "img": "/img/red.jpg",
     "category": "tortas",
     "stock": 7
   },
   {
     "id": 8,
-    "nombre": "Torta Balcarce",
-    "precio": 750,
-    "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
-    "img": "https://via.placeholder.com/200",
+    "nombre": "Torta Bosque Negro",
+    "precio": 2500.00,
+    "descripcion": "Bizcochuelo de cacao con crema batida y cerezas en almibar",
+    "img": "/img/bizcochuelo.jpg",
     "category": "tortas",
     "stock": 7
   }

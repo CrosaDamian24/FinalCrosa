@@ -1,36 +1,28 @@
-
-
+.header {
+    background-color: rgba(255, 255, 204, 255);
     .header__container {
-        // max-width: 900px;
         margin: 0 auto;
         padding: 30px 0;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color:  #ed0c80;
-        .header__logo {
 
+        background-color: rgba(255, 255, 204, 255);
+        .header__logo {
             width: 80px;
         }
 
         .navbar {
             display: flex;
-      
-            // justify-content: center;
-            // align-items: center;
-             gap: 15px;
+            gap: 15px;
             .navbar__link {
                 font-size: 16px;
                 font-weight: 700;
-                color: white;
+                color: #6a4724;
                 cursor: pointer;
                 margin: 0;
             }
         }
     }
-
-
-.header {
-
-    background-color:  #ed0c80;}
+}
