@@ -1,13 +1,30 @@
-.carrito {
+.cart-widget {
     display: flex;
     align-items: center;
     gap: 4px;
-    color:#6a4724;
+    color: #6a4724;
     cursor: pointer;
-    .carrito-icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 3s;
+
+    .cart-icon {
         font-size: 28px;
+         color: #6a4724;
     }
     span {
         font-size: 20px;
+        font-weight: bolder;
+         color: #6a4724;
     }
+
+    &-active {
+        visibility: visible;
+         color: #6a4724;
+        opacity: 1;
+    }
+}
+
+.color {
+    color: #6a4724;
 }

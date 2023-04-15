@@ -1,45 +1,51 @@
-import { useState } from "react";
 
-export const ItemCount = ({ initial, stock }) => {
-  const [counter, setCounter] = useState(initial);
 
+export const ItemCount = ({  max ,cantidad,setCantidad,stock,setStock, agregar}) => {
+  // const [counter, setCounter] = useState(initial);
+ 
+// console.log(cantidad,max)
   const handleSuma = () => {
-    if (counter < stock) {
-      setCounter(counter + 1);
-    }
+    cantidad < max && setCantidad(cantidad + 1);
+     stock >=1 && setStock(stock-1)
+
+
+    // }
   };
 
   const handleResta = () => {
-    if (counter > 1) {
-      setCounter(counter - 1);
-    }
+    cantidad >= 1 && setCantidad(cantidad - 1);
+    cantidad >= 1 &&  setStock(stock+1)
+
+   
   };
+
+  // const handeleAgregar = () =>{
+  //   const itemToAdd = {
+  //     ...item,
+  //     cantidad
+  //   }
+  //   console.log(itemToAdd)
+  // }
 
   return (
     <div>
-      <button
-        className="btn btn-danger"
-        onClick={handleResta}
-        disabled={counter === initial}
-      >
+   
+
+      <h3> {stock >0?`En stock `+stock:"Sin Stock"} </h3>
+      {stock < 5 && stock>1 && <p><srtong>Quedan solo {stock} unidades!</srtong></p>}
+      {stock ===1 && <p><srtong>Queda solo {stock} unidad!</srtong></p>}
+      
+      <button onClick={handleResta} className="btn btn-outline-primary" disabled={cantidad===0}>
         -
       </button>
-      <span>{counter}</span>
-      <button
-        className="btn btn-primary"
-        onClick={handleSuma}
-        disabled={counter >= stock}
-      >
+      <span className="mx-3">{cantidad}</span>
+      <button onClick={handleSuma} className="btn btn-primary" disabled={stock===0}>
         +
       </button>
-      <button
-        onClick={() => {
-          alert(`Agregaste ${counter} productos`);
-        }}
-      >
-        Agregar al carrito
-      </button>
+      <hr/>
+      <button onClick={agregar} className="btn btn-primary" disabled={cantidad===0} >Agregar al carrito</button>
     </div>
+    
   );
 };
 

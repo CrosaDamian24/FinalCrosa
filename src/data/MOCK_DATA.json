@@ -3,8 +3,8 @@
     "id": 1,
     "nombre": "Postre Oreo",
     "precio": 800.00,
-    "descripcion": "Una capa de Oreo, dulce de leche y crema chantillí.",
-    "img":"/img/oreo.png",
+    "descripcion": "Base de cookies de oreo , dulce de leche, crema chantilly y trozos de oreos.",
+    "img":"/img/oreo.jpg",
    
     "category": "postres",
     "stock": 5
@@ -13,17 +13,17 @@
     "id": 2,
     "nombre": "Postre Chocolina",
     "precio": 750.00,
-    "descripcion": "Una capa de Chocolinas, dulce de leche y crema chantillí.",
-    "img": "/img/chocotorta.png",
+    "descripcion": "Crema con dulce de leche y cookies de chocolinas.",
+    "img": "/img/chocotorta.jpg",
     "category": "postres",
     "stock": 6
   },
   {
     "id": 3,
-    "nombre": "Postre Gula",
+    "nombre": "Postre Brownie",
     "precio": 850.00,
-    "descripcion": "Una capa de Chocolinas y Oreo, dulce de leche y crema chantillí.",
-    "img": "/img/gula.png",
+    "descripcion": "Brownie , dulce de leche, crema chantilly y crocante.",
+    "img": "/img/brownie.jpg",
     "category": "postres",
     "stock": 10
   },
@@ -31,13 +31,31 @@
     "id": 4,
     "nombre": "Postre Cheesecake",
     "precio": 750.00,
-    "descripcion": "Capa de Vanillas recubiertas de queso crema y futos rojos.",
-    "img": "/img/cheesecake.png",
+    "descripcion": "Base de cookies, crema de queso y salsa de frutos rojos.",
+    "img": "/img/cheesecake.jpg",
     "category": "postres",
     "stock": 4
   },
   {
     "id": 5,
+    "nombre": "Postre Toddy",
+    "precio": 750.00,
+    "descripcion": "Dulce de leche , galletas toddy y Mousse chocolate y crocante de choco.",
+    "img": "/img/toddy.jpg",
+    "category": "postres",
+    "stock": 4
+  },
+  {
+    "id": 6,
+    "nombre": "Postre Mousse Maracuya",
+    "precio": 750.00,
+    "descripcion": "Brownie, Mousse de maracuya y salsa de maracuya.",
+    "img": "/img/maracuya.jpg",
+    "category": "postres",
+    "stock": 4
+  },
+  {
+    "id": 7,
     "nombre": "Torta Matilda",
     "precio": 3200.00,
     "descripcion": "Bizcochuelo humedo de chocolote con mouse de chocolate en el medio",
@@ -46,16 +64,16 @@
     "stock": 7
   },
   {
-    "id": 6,
+    "id": 8,
     "nombre": "Torta Chocolate",
     "precio": 3000.00,
     "descripcion": "Bizcochuelo de vainilla con dulce de leche y chips de chocolate en el medio",
     "img": "/img/chocolate.jpg",
     "category": "tortas",
-    "stock": 2
+    "stock": 0
   },
   {
-    "id": 7,
+    "id": 9,
     "nombre": "Torta Red Velvet",
     "precio": 2300.00,
     "descripcion": "Bizcochuelo sabor vainilla recubierto de queso crema dulce",
@@ -64,7 +82,7 @@
     "stock": 7
   },
   {
-    "id": 8,
+    "id": 10,
     "nombre": "Torta Bosque Negro",
     "precio": 2500.00,
     "descripcion": "Bizcochuelo de cacao con crema batida y cerezas en almibar",
