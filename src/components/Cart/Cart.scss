@@ -5,20 +5,17 @@ a:active {
   color: white;
 }
 
-.cart{
-    color: #6a4724;
-    font-family: "Nunito", sans-serif;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-
- 
+.cart {
+  color: #6a4724;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.titulo{
+.titulo {
   font-family: "Nunito", sans-serif;
   color: #6a4724;
-
 }
 
 .botonfinalizar {
@@ -29,21 +26,21 @@ a:active {
   margin-left: 15px;
   font-family: "Nunito", sans-serif;
   &:hover {
-      border-color: #6a4724;
-      color: #6a4724;
-      background-color: rgba(255, 255, 204, 255);
+    border-color: #6a4724;
+    color: #6a4724;
+    background-color: rgba(255, 255, 204, 255);
   }
 }
-.botonvaciar{
+.botonvaciar {
   background-color: red;
   color: white;
   font-family: "Nunito", sans-serif;
   &:hover {
     border-color: red;
     color: red;
+  }
 }
-}
-.cartsinproductos{
+.cartsinproductos {
   height: 50vh;
   color: #6a4724;
   font-family: "Nunito", sans-serif;
@@ -53,20 +50,19 @@ a:active {
   justify-content: center;
   align-items: center;
   border-color: #6a4724;
-  &__titulo{
+  &__titulo {
     font-family: "Nunito", sans-serif;
     color: #6a4724;
   }
 }
 
-.botonvolver{
+.botonvolver {
   background-color: #6a4724;
   color: white;
-    align-items: center;
-    font-family: "Nunito", sans-serif;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
   &:hover {
-      border-color: #6a4724;
-      background-color: rgba(255, 255, 204, 255);
-    
+    border-color: #6a4724;
+    background-color: rgba(255, 255, 204, 255);
   }
 }

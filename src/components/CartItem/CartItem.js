@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { BsFillTrash3Fill } from "react-icons/bs";
 import "./CartItem.scss";
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer, toast } from "react-toastify";
 
 export const CartItem = ({ item }) => {
   const { removerItem, editCantidad } = useContext(CartContext);
@@ -13,11 +13,11 @@ export const CartItem = ({ item }) => {
       <div className="carrito__imagen">
         <img src={item.img} alt={item.nombre} className="img-fluid" />
       </div>
-      <div className="carrito__botones"> 
+      <div className="carrito__botones">
         <button
           onClick={() => {
             editCantidad(item.id, -1);
-            toast.error(' Quitado del carrito', {
+            toast.error(" Quitado del carrito", {
               position: "top-right",
               autoClose: 1000,
               hideProgressBar: false,
@@ -25,10 +25,8 @@ export const CartItem = ({ item }) => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: "light"
-        
-              })        
-
+              theme: "light",
+            });
           }}
           disabled={item.cantidad === 0}
           className="btn botonquitar"
@@ -40,7 +38,7 @@ export const CartItem = ({ item }) => {
         <button
           onClick={() => {
             editCantidad(item.id, 1);
-            toast.success(' Agregado al carrito', {
+            toast.success(" Agregado al carrito", {
               position: "top-right",
               autoClose: 1000,
               hideProgressBar: false,
@@ -48,22 +46,25 @@ export const CartItem = ({ item }) => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: "light"
-        
-              });
+              theme: "light",
+            });
           }}
           disabled={item.cantidad === item.stock}
           className="btn botonagregar"
         >
           +
         </button>
-        <ToastContainer/>
+        <ToastContainer />
       </div>
       {/* <p>Stock actualizado {item.stock - item.cantidad}</p> */}
       <div className="carrito__precio">
-
-      <p>Precio Unitario: <strong>$ {(item.precio).toFixed(2)}</strong></p>
-      <p >Precio Total: <strong >$ {(item.precio * item.cantidad).toFixed(2)} </strong></p>
+        <p>
+          Precio Unitario: <strong>$ {item.precio.toFixed(2)}</strong>
+        </p>
+        <p>
+          Precio Total:{" "}
+          <strong>$ {(item.precio * item.cantidad).toFixed(2)} </strong>
+        </p>
       </div>
       <button
         onClick={() => {

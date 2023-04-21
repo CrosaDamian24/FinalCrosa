@@ -15,6 +15,7 @@ import Orders from "../Orders/Orders";
 import { ToastContainer, toast } from "react-toastify";
 import "./CheckOut.scss";
 
+
 const CheckOut = () => {
   const { cart, totalCarrito, vaciarCarrito } = useContext(CartContext);
 
@@ -39,7 +40,10 @@ const CheckOut = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+
   const handleSubmit = async (e) => {
+
     e.preventDefault();
 
     if (values.nombre.length < 5) {
@@ -118,29 +122,23 @@ const CheckOut = () => {
         });
       } else {
         outOfStock.push(item);
+  
       }
     });
 
     if (outOfStock.length === 0) {
       await batch.commit();
       const { id } = await addDoc(ordersRef, orden);
+   
       setOrderId(id);
       vaciarCarrito();
+    
+   
+      
 
-      // batch.commit()
-      // .then( () =>{
-      //         addDoc(ordersRef, orden)
-      //         .then((doc) => {
-      //             // console.log(doc.id)
-      //             setOrderId(doc.id)
-      //             vaciarCarrito()
-      //         })
-      // })
+
     } else {
-      // alert(
-      //   "Hay items sin stock: " + outOfStock.map((i) => i.nombre).join(", ")
 
-      // );
 
       toast.error(
         "NO hay stock de: " + outOfStock.map((i) => i.nombre).join(", "),
@@ -157,22 +155,24 @@ const CheckOut = () => {
       );
     }
   };
+  
+
+
+
+      
 
   if (orderID) {
-    // return(
-    //     <div className="container my-5">
-    //         <h2>Tu compra se registró exitosamente! </h2>
-    //         <hr/>
-    //         <p>Guardá tu número de orden: <strong> {orderID}</strong></p>
-    //     </div>
-    // )
-    return <Orders orden={orderID} />;
+    return <Orders orden={orderID} />
+   
+
+   ;
   }
 
   if (cart.length === 0) {
     return <Navigate to="/" />;
   }
   return (
+    
     <div className="container my-5 general">
       <h2>Ingresa tus datos</h2>
 
@@ -205,7 +205,9 @@ const CheckOut = () => {
         />
 
         <div className="boton">
-          <button className="btn botonenviar" type="submit">
+          <button className="btn botonenviar" type="submit" onClick={() => {
+ 
+        }}>
             Enviar
           </button>
         </div>
