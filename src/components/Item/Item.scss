@@ -10,34 +10,42 @@ a:active {
   flex-direction: column;
   align-items: center;
   max-width: 250px;
-}
+  border-radius: 15px;
+    margin: 5px;
 
-.card__sombra {
-  box-shadow: 0px 0px 5px 5px #6a4724a6;
+}
+.card{
+  font-family: "Nunito", sans-serif;
+  &__sombra{
+    box-shadow: 0px 0px 5px 5px #6a4724a6;
   align-items: center;
   margin-bottom: 10px;
   color: #6a4724;
   font-family: "Nunito", sans-serif;
+  // background-color: rgba(255, 255, 204, 255);
+  }
+  &__title{
+    color:  #6a4724;
+    margin: 5px;
+    font-style: italic;
+
+  }
+
 }
 
-// .card__sombra--modificada {
-//   opacity: 75%;
-
-// }
-
-.selectorColor {
+.botonvermas {
   background-color: #6a4724;
-
-  color: #030303;
-  width: 100px;
-  border-radius: 10px;
-  border-color: #6a4724;
-  margin-bottom: 5px;
-  // background-color: #540e51;
+  color: white;
+  align-items: center;
+margin-bottom: 5px;
+  font-family: "Nunito", sans-serif;
+  padding: 5px;
+  
+  &:hover {
+      border-color: #6a4724;
+      color: #6a4724;
+      background-color:  rgba(255, 255, 204, 255);
+      font-weight: bold;
+  }
 }
 
-.selectorColor:hover {
-  background-color: #eba45e;
-  color: #6a4724;
-  border-color: rgba(255, 255, 204, 255);
-}

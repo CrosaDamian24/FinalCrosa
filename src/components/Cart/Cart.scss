@@ -1,0 +1,72 @@
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.cart{
+    color: #6a4724;
+    font-family: "Nunito", sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+ 
+}
+.titulo{
+  font-family: "Nunito", sans-serif;
+  color: #6a4724;
+
+}
+
+.botonfinalizar {
+  background-color: #6a4724;
+  color: white;
+  width: 50 px;
+  align-items: center;
+  margin-left: 15px;
+  font-family: "Nunito", sans-serif;
+  &:hover {
+      border-color: #6a4724;
+      color: #6a4724;
+      background-color: rgba(255, 255, 204, 255);
+  }
+}
+.botonvaciar{
+  background-color: red;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  &:hover {
+    border-color: red;
+    color: red;
+}
+}
+.cartsinproductos{
+  height: 50vh;
+  color: #6a4724;
+  font-family: "Nunito", sans-serif;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-color: #6a4724;
+  &__titulo{
+    font-family: "Nunito", sans-serif;
+    color: #6a4724;
+  }
+}
+
+.botonvolver{
+  background-color: #6a4724;
+  color: white;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+  &:hover {
+      border-color: #6a4724;
+      background-color: rgba(255, 255, 204, 255);
+    
+  }
+}

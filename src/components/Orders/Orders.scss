@@ -1,0 +1,18 @@
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.general{
+    color: #6a4724;
+    font-family: "Nunito", sans-serif;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: #6a4724;
+
+}

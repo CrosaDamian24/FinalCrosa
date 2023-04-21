@@ -4,35 +4,69 @@ a:active {
     text-decoration: none;
     color: white;
 }
+
+.principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+
+}
 .detalle {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 5px #6a4724a6;
-    font-family: "Nunito", sans-serif;
+    
     color: #6a4724;
+    height: 50vh;
 
-    .detalle__titulo {
+
+    &__titulo {
         display: flex;
         justify-content: center;
         margin-top: 10px;
         font-weight: bold;
+        font-style: italic;
     }
 
-    .detalle__img {
+    &__img {
         display: flex;
-        height: 50vh;
+        height: 40%;
         justify-content: center;
     }
-    .detalle__imagen {
+    &__imagen {
         border-radius: 15px;
         margin: 5px;
     }
-    .detalle__descripcion {
+    &__descripcion {
         display: flex;
-
-        font-style: italic;
         margin: 5px;
         justify-content: center;
+        // font-family: "Nunito", sans-serif;
+        color: #6a4724
     }
+}
+.detalle__boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5px;
+
+}
+.botonterminar{
+    background-color: #6a4724;
+       align-items: center;
+    &:hover {
+        border-color: #6a4724;
+        background-color: rgba(255, 255, 204, 255);
+    }
+}
+.sinstock{
+    border-radius: 10px;
+    background-color: red;
+    padding: 5px;
+    color: white;
+
 }

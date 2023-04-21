@@ -38,7 +38,7 @@ export const ItemDetailContainer = () => {
   }, [itemId]);
 
   return (
-    <div className="container my-5 ">
+    <div className="container my-5">
 
       {loading ? <Loading /> : <ItemDetail item={item} />}
 

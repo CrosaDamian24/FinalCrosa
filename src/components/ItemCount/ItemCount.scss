@@ -1,0 +1,54 @@
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: white;
+}
+.leyenda {
+    visibility: hidden;
+
+    &-active {
+        visibility: visible;
+    }
+}
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.botonagregar {
+    background-color: #6a4724;
+    color: rgba(255, 255, 204, 255);
+    width: 50 px;
+    align-items: center;
+    &:hover {
+        border-color: #6a4724;
+        background-color: rgba(255, 255, 204, 255);
+    }
+}
+
+.botonquitar {
+    border-color: #6a4724;
+    width: 50 px;
+    align-items: center;
+    background-color: rgba(255, 255, 204, 255);
+    &:hover {
+        background-color: #6a4724;
+        color: rgba(255, 255, 204, 255);
+    }
+}
+
+.botones--modificada {
+    margin: 10px;
+    font-family: "Nunito", sans-serif;
+    background-color: #6a4724;
+    color: rgba(255, 255, 204, 255);
+    &:hover {
+        border-color: #6a4724;
+        background-color: rgba(255, 255, 204, 255);
+        color: #6a4724;
+    }
+}
+
+

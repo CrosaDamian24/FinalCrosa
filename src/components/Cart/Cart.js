@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { CartContext } from "../../cartContext/CartContext";
+import { CartContext } from "../../context/CartContext";
 import { CartItem } from "../CartItem/CartItem";
 import { Link } from "react-router-dom";
+import "./Cart.scss"
 // import { CheckOut } from "../CheckOut/CheckOut"
 
 
@@ -11,18 +12,18 @@ const Cart = () => {
 
   if (cart.length === 0){
     return (
-        <div className="container my-5">
-        <h2>No tienes productos agregados</h2>
+        <div className="container my-5 cartsinproductos">
+        <h2 className="cartsinproductos__titulo">No hay productos en el carrito</h2>
         {/* <br/> */}
-        <Link className="btn btn-primary" to ="/"> Volver</Link>
+        <Link className="btn botonvolver" to ="/"> Volver</Link>
         </div>
     )
   }
   return (
     <div className="container my-5">
 
-      <h2>Tu Carrito de Compras</h2>
-      <hr />
+      <h3 className="titulo">TU PEDIDO</h3>
+   <div className="col cart">
 
       {cart.map((item) => (
         <CartItem key={item.id} item={item} />
@@ -31,9 +32,12 @@ const Cart = () => {
       )
       
       }
-     <h3>Total: $  {totalCarrito()}</h3>
-    <button onClick={vaciarCarrito} className="btn btn-danger">Vaciar Carrito</button>
-    <Link to = "/checkout" className="btn btn-success">Terminar mi compra</Link>
+   </div>
+ 
+     
+     <h3 className="titulo" >Total: ${(totalCarrito().toFixed(2))}</h3>
+    <button onClick={vaciarCarrito} className="btn botonvaciar">Vaciar Carrito</button>
+    <Link to = "/checkout" className="btn botonfinalizar">Finalizar compra</Link>
 
     </div>
   );

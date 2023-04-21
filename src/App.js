@@ -8,9 +8,11 @@ import React, { useState } from "react";
 import { Inicio } from "./components/Inicio/Inicio";
 import { Carga } from "./components/Carga/Carga";
 import { Error404 } from "./components/Error404/Error404";
-import { CartContext, CartProvider } from "./cartContext/CartContext";
+import { CartContext, CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
-import  CheckOut  from './components/CheckOut/CheckOut'
+import CheckOut from "./components/CheckOut/CheckOut";
+import LoginScreen from "./components/LoginScreen/LoginScreen";
+import { LoginProvider } from "./context/LoginContext";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -29,32 +31,34 @@ function App() {
     //   }
 
     // </div>
+    <LoginProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <div>
+            <Navbar />
 
-    <CartProvider>
-      <BrowserRouter>
-        <div>
-          <Navbar />
+            <Routes>
+              <Route
+                path="/"
+                element={<ItemListContainer item={"Productos"} />}
+              />
+              <Route
+                path="/productos/:categoryId"
+                element={<ItemListContainer item={""} />}
+              />
+              <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<CheckOut />} />
+              <Route path="*" element={<Error404 />} />
+              <Route path="Login" element={<LoginScreen />} />
+              {/* <Route            path="/nostros"    element={<ItemListContainer />}  /> */}
+            </Routes>
 
-          <Routes>
-            <Route
-              path="/"
-              element={<ItemListContainer item={"Productos"} />}
-            />
-            <Route
-              path="/productos/:categoryId"
-              element={<ItemListContainer item={""} />}
-            />
-            <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={ <CheckOut /> }/>
-            <Route path="*" element={<Error404 />} />
-            {/* <Route            path="/nostros"    element={<ItemListContainer />}  /> */}
-          </Routes>
-
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </CartProvider>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </CartProvider>
+    </LoginProvider>
   );
 }
 
