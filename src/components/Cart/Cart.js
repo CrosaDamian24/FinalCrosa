@@ -10,7 +10,7 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <div className="container my-5 cartsinproductos">
-        <h2 className="cartsinproductos__titulo">
+        <h2 >
           No hay productos en el carrito
         </h2>
         {/* <br/> */}

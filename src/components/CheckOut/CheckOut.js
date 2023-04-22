@@ -12,10 +12,11 @@ import {
 } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import Orders from "../Orders/Orders";
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 import "./CheckOut.scss";
 import CheckOutForm from "../CheckOutForm/CheckOutForm";
-
+import { Carga } from "../Carga/Carga";
+import { Loading } from '../Loading/Loading'
 
 const CheckOut = () => {
   const { cart, totalCarrito, vaciarCarrito } = useContext(CartContext);
@@ -33,6 +34,7 @@ const CheckOut = () => {
   });
 
   const [orderID, setOrderId] = useState(null);
+  const [carga, setCarga] = useState(true);
 
   //   funciones
   const handleImputChange = (e) => {
@@ -42,9 +44,7 @@ const CheckOut = () => {
     });
   };
 
-
   const handleSubmit = async (e) => {
-
     e.preventDefault();
 
     if (values.nombre.length < 5) {
@@ -116,31 +116,23 @@ const CheckOut = () => {
 
     productos.docs.forEach((doc) => {
       const item = cart.find((prod) => prod.id === doc.id);
-
+      setCarga(false);
       if (doc.data().stock >= item.cantidad) {
         batch.update(doc.ref, {
           stock: doc.data().stock - item.cantidad,
         });
       } else {
         outOfStock.push(item);
-  
       }
     });
 
     if (outOfStock.length === 0) {
       await batch.commit();
       const { id } = await addDoc(ordersRef, orden);
-   
       setOrderId(id);
+      setCarga(true);
       vaciarCarrito();
-    
-   
-      
-
-
     } else {
-
-
       toast.error(
         "NO hay stock de: " + outOfStock.map((i) => i.nombre).join(", "),
         {
@@ -156,21 +148,27 @@ const CheckOut = () => {
       );
     }
   };
-  
 
-  if (orderID) {
-    return <Orders orden={orderID} />
 
-   ;
+  if (!carga) {
+   return <Carga />;
   }
+  if (orderID) {
+     return <Orders orden={orderID} />
+   }
+
+
 
   if (cart.length === 0) {
     return <Navigate to="/" />;
   }
-  return ( <CheckOutForm handleSubmit = {handleSubmit}
-                        handleImputChange = {handleImputChange}
-                        values = {values}
-  />
+
+  return (
+    <CheckOutForm
+      handleSubmit={handleSubmit}
+      handleImputChange={handleImputChange}
+      values={values}
+    />
   );
 };
 

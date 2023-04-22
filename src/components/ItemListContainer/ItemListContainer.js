@@ -41,7 +41,7 @@ export const ItemListContainer = ({ item }) => {
   }, [categoryId]);
 
   return (
-    <div>
+    <div >
       {loading ? (
         <Loading />
       ) : productos.length > 0 > 0 ? (

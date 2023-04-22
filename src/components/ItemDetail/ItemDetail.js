@@ -31,7 +31,7 @@ export const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div className="principal">
+    <div className=" container my-5 principal">
       <div className=" detalle col-6">
         <div className="detalle__titulo">
           <h4 className="my-2">{item.nombre}</h4>
